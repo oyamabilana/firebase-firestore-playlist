@@ -20,5 +20,6 @@ function renderCafe(doc){
 db.collection('cafes').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
         renderCafe(doc);
+        console.log(doc.data().name)
     });
 });
